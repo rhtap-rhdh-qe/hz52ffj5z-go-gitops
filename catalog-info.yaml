@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hz52ffj5z-go-gitops
+  description: This is GitOps manifest for hz52ffj5z-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=hz52ffj5z-go
+    backstage.io/kubernetes-id: hz52ffj5z-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: hz52ffj5z-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hz52ffj5z-go
